@@ -1,0 +1,14 @@
+# @format
+
+version: '3'
+
+services:
+    web:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        volumes:
+            - '~/cms4vr:/var/www/html'
+            - './php.ini:/usr/local/etc/php/conf.d/php-local.ini'
+        ports:
+            - '80:80'
